@@ -29,3 +29,7 @@ log.info('bootstrapping done.')
 // 	})
 
 // })
+
+$(function () {
+	$('div.container h1').text(dateFns.format(new Date(), 'MM/DD/YYYY'));
+});

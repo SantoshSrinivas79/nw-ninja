@@ -31,5 +31,8 @@ log.info('bootstrapping done.')
 // })
 
 $(function () {
-	$('div.container h1').text(dateFns.format(new Date(), 'MM/DD/YYYY'));
+	$('div.container h2#EST').text(luxon.DateTime.local().setZone('America/New_York'));
+	$('div.container h2#IST').text(luxon.DateTime.local());
+	$('div.container h2#UTC').text(luxon.DateTime.local().setZone('UTC'));
+
 });
